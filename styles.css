@@ -366,7 +366,8 @@ img{max-width:100%;display:block}
   .about-inner,.feature-inner{grid-template-columns:1fr;gap:2.2rem}
   .strip-grid{grid-template-columns:1fr;gap:1.4rem}
   .img-placeholder.portrait,.img-placeholder.cutout,.img-placeholder.tall,.img-placeholder.about-photo{min-height:340px}
-  .feature-inner.reverse .feature-text{order:0}
+  .feature-text{order:1}
+  .feature-media{order:2}
   .cards-3,.steps-grid,.treat-grid,.gallery-grid{grid-template-columns:1fr 1fr}
   .quick-grid{grid-template-columns:1fr}
   .ba-grid,.symptom-list{grid-template-columns:1fr}
