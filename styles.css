@@ -272,6 +272,37 @@ img{max-width:100%;display:block}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .gallery-grid img.gal{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;display:block}
 
+/* ===== CARROSSEL DA GALERIA ===== */
+.gallery-carousel{position:relative;max-width:1080px;margin:0 auto}
+.gc-track{
+  display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:.3rem;
+  scrollbar-width:none;cursor:grab;
+}
+.gc-track::-webkit-scrollbar{display:none}
+.gc-track.dragging{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none}
+.gc-slide{
+  height:460px;width:auto;flex:0 0 auto;border-radius:12px;display:block;
+  scroll-snap-align:center;user-select:none;-webkit-user-drag:none;box-shadow:var(--shadow-sm);
+}
+.gc-arrow{
+  position:absolute;top:230px;transform:translateY(-50%);z-index:3;
+  width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.92);
+  box-shadow:var(--shadow-sm);color:var(--dark);font-size:1.7rem;line-height:1;cursor:pointer;
+  display:grid;place-items:center;transition:.2s;
+}
+.gc-arrow:hover{background:#fff;color:var(--green);transform:translateY(-50%) scale(1.08)}
+.gc-prev{left:-8px}
+.gc-next{right:-8px}
+.gc-dots{display:flex;justify-content:center;gap:.55rem;margin-top:1.6rem;flex-wrap:wrap}
+.gc-dot{width:11px;height:11px;border-radius:50%;border:0;background:#e3cdd6;cursor:pointer;padding:0;transition:.25s}
+.gc-dot:hover{background:#d3a9bb}
+.gc-dot.active{background:var(--green);transform:scale(1.25)}
+@media(max-width:600px){
+  .gc-slide{height:360px}
+  .gc-arrow{top:180px}
+}
+
 /* ===== FAQ ===== */
 .faq{background:var(--white);padding:5.5rem 0}
 .faq-list{max-width:820px;margin:0 auto;display:grid;gap:1rem}
@@ -328,7 +359,10 @@ img{max-width:100%;display:block}
   .main-nav a{padding:.85rem 6%;width:100%;border-bottom:1px solid var(--line)}
   .main-nav a.active{border-bottom-color:var(--line)}
   .nav-toggle{display:flex}
-  .hero{min-height:auto}
+  .hero{min-height:92vh;align-items:flex-end}
+  .hero-bg{background-image:url("BANNERHEROCELULAR.png");background-position:center top;animation:none}
+  .hero-inner{padding:0 14px 22px;justify-content:center}
+  .hero-card{width:100%;padding:1.9rem 1.4rem}
   .about-inner,.feature-inner{grid-template-columns:1fr;gap:2.2rem}
   .strip-grid{grid-template-columns:1fr;gap:1.4rem}
   .img-placeholder.portrait,.img-placeholder.cutout,.img-placeholder.tall,.img-placeholder.about-photo{min-height:340px}
@@ -342,4 +376,9 @@ img{max-width:100%;display:block}
   .cards-3,.steps-grid,.treat-grid{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr}
+  .hero{min-height:88vh}
+  .hero-card{padding:1.6rem 1.2rem}
+  .hero-card .h1-top{font-size:1.45rem}
+  .hero-card .h1-big{font-size:1.95rem}
+  .hero-card p{font-size:.95rem}
 }

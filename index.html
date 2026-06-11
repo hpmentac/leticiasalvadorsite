@@ -211,13 +211,18 @@
       <div class="section-head">
         <h2>Galeria de Fotos</h2>
       </div>
-      <div class="gallery-grid">
-        <img class="gal" src="GALERIADEFOTO01.jpeg" alt="Foto da galeria 1" />
-        <img class="gal" src="GALERIADEFOTO02.jpeg" alt="Foto da galeria 2" />
-        <img class="gal" src="GALERIADEFOTO03.jpeg" alt="Foto da galeria 3" />
-        <img class="gal" src="GALERIADEFOTO04.jpeg" alt="Foto da galeria 4" />
-        <img class="gal" src="GALERIADEFOTO05.jpeg" alt="Foto da galeria 5" />
-        <img class="gal" src="GALERIADEFOTO06.jpeg" alt="Foto da galeria 6" />
+      <div class="gallery-carousel" id="galeriaCarousel">
+        <button class="gc-arrow gc-prev" type="button" aria-label="Foto anterior">&#8249;</button>
+        <div class="gc-track" id="galeriaTrack">
+          <img class="gc-slide" src="GALERIADEFOTO01.jpeg" alt="Foto da galeria 1" draggable="false" />
+          <img class="gc-slide" src="GALERIADEFOTO02.jpeg" alt="Foto da galeria 2" draggable="false" />
+          <img class="gc-slide" src="GALERIADEFOTO03.jpeg" alt="Foto da galeria 3" draggable="false" />
+          <img class="gc-slide" src="GALERIADEFOTO04.jpeg" alt="Foto da galeria 4" draggable="false" />
+          <img class="gc-slide" src="GALERIADEFOTO05.jpeg" alt="Foto da galeria 5" draggable="false" />
+          <img class="gc-slide" src="GALERIADEFOTO06.jpeg" alt="Foto da galeria 6" draggable="false" />
+        </div>
+        <button class="gc-arrow gc-next" type="button" aria-label="Próxima foto">&#8250;</button>
+        <div class="gc-dots" id="galeriaDots"></div>
       </div>
     </div>
   </section>
